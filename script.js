@@ -556,6 +556,23 @@ const get3Countries = async (c1, c2, c3) => {
 get3Countries('Nigeria', 'Canada', 'USA');
 */
 
+console.log('1: Will get location');
+
+// const city = whereAmI();
+// console.log(city);
+
+// whereAmI().then((city) => console.log(`2: ${city}`)).catch((error) => console.error(`2: ${error.message}`)).finally(() => console.log('3: Finished getting location'))
+
+(async function () {
+  try {
+    const city = await whereAmI();
+    // city.json();
+    console.log(`2: ${city}`);
+  } catch (error) {
+    console.log(`${ErrorEvent.message}`);
+  }
+})();
+
 //Promise.race
 
 (async function () {
